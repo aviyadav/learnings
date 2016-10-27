@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-speedment-tool</actionName>
+            <displayName>speedment-tool</displayName>
+            <goals>
+                <goal>speedment:tool</goal>
+            </goals>
+        </action>
+    </actions>
