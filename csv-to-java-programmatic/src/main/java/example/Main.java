@@ -29,7 +29,10 @@ public class Main {
         List<Customer> messageOut = Main.runSmooksTransform();
 
         System.out.println("==============Message Out=============");
-        System.out.println(messageOut);
+//        System.out.println(messageOut);
+        for (Customer customer : messageOut) {
+            System.out.println(customer.toString());
+        }
         System.out.println("======================================\n\n");
         
     }
