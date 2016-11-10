@@ -100,7 +100,7 @@
 			
 			Fix Simple Example
 		 -->
-		<camel:route id="fix-simple-example" autoStartup="false">
+		<camel:route id="fix-simple-example" autoStartup="true">
 			<camel:from uri="file:inbox/fix/simple?noop=true&amp;delay=10" />
 			<camel:log message="CAMEL BINDY SIMPLE FIX MESSAGE EXAMPLE" loggingLevel="WARN"/>
 			<camel:unmarshal ref="bindyDataformat" >
@@ -114,13 +114,17 @@
 		
                Fix Example with Sections
         -->
-        <camel:route id="fix-complex-with-sections-example" autoStartup="true">
+        <camel:route id="fix-complex-with-sections-example" autoStartup="false">
             <camel:from uri="file:inbox/fix/complex?noop=true&amp;delay=10" />
             <camel:log message="CAMEL BINDY FIX MESSAGE EXAMPLE WITH SECTIONS " loggingLevel="WARN" />
             <camel:unmarshal ref="bindyDataformat" >
                 <camel:bindy type="KeyValue"  locale="en-us" classType="org.apache.camel.example.fix.complex.Order" />
             </camel:unmarshal>
+            <camel:marshal  ref="bindyDataformat" > 
+                <camel:bindy type="KeyValue"  classType="org.apache.camel.example.fix.complex.Order"   />
+            </camel:marshal>
             <camel:log message="OUTPUT FOR FIX EXAMPLE WITH SECTIONS ::: ${body}" loggingLevel="WARN"></camel:log>  
+            <camel:to uri="file:outbox/fix/complex?fileName=fix_result.txt&amp;fileExist=Append"/>
         </camel:route>
 		
 		

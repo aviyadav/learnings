@@ -7,12 +7,6 @@ import org.apache.camel.dataformat.bindy.annotation.Link;
 import org.apache.camel.dataformat.bindy.annotation.Message;
 import org.apache.camel.dataformat.bindy.annotation.Section;
 
-/**
- * Follow readMe for tags and tagnames
- *
- * @author santoshjo
- *
- */
 @Message(keyValuePairSeparator = "=", pairSeparator = "\\u0001", type = "FIX", version = "4.1")
 @Section(number = 2)
 public class Order {
