@@ -1,0 +1,43 @@
+Find folder size
+du -kh --max-depth=1
+
+find files with size more than 10MB
+find /var/tmp/avinash/ -xdev -type f -size +10M -exec ls -la {} \; | sort -nk 5
+
+to remove directory with files.
+rm -r mydir
+
+/ms/dist/fidcredit/PROJ/data/prod/risk1/.snapshot/weekly.1/LMS/NY/PIPELINE_NY/2016-11-04/LMS_PIPELINE_NY_2016-11-04 | head -n 1 | tr "|" "\n" | grep -ni c1Book
+
+less /v/campus/ny/cs/fidcredit/swainp/risk1/LMS/LMS_BANKLOANS_LN_2017-05-31.PARTIAL_FILE | cut -f 112 -d "|" | awk '{total = total + $1} END {printf("%10.5f\n",total)}'
+
+
+
+split -l 25 top100.all.data
+
+awk 'NR%25==0 {++c} {print $0 > c".txt"}' top100.all.data
+
+sed -n '100,1000p' FastM2M_NY_MATURED2_2017-02-14 > sedop2.txt
+
+read nth line from a text:
+sed -n '2{p;q}' FastM2M_LN_ABMEL_iw8uh_2017-03-29.MAIN_FILE
+
+/ms/dist/laf/PROJ/host_reboot/prod/bin/host_reboot reboot dd881c35n1 -reason "Host dd881c35n1 not available"
+
+dd881c35n1
+dd881c26n1
+
+/ms/dist/fidcredit/PROJ/creditTwo/prod/common/utils/runGrepReportDump.py -i R1_REG_UAT -- -M /v/campus/ny/cs/fidcredit/avinashy/risk1/ -X EOD_GR_Request.xml -o /v/campus/ny/cs/fidcredit/avinashy/risk1/FastM2M/logs -n fastm2m_GR_Response -T csv -R 2017-03-06
+
+
+
+
+
+/ms/dist/fidcredit/PROJ/creditTwo/prod/common/utils/runGrepReportDump.py -i R1_REG_UAT -- -M /v/campus/ny/cs/fidcredit/avinashy/risk1/ -X fastm2mrequest.xml -o /v/campus/ny/cs/fidcredit/avinashy/risk1/FastM2M/logs -n fastm2m_GR_Response -T csv -R 2017-03-06
+
+
+/ms/dist/fidcredit/PROJ/creditTwo/prod/common/utils/runGrepReportDump.py -i R1_REG_UAT -- -M /v/campus/ny/cs/fidcredit/avinashy/risk1/ -X PLXCLNH-request.xml -o /v/campus/ny/cs/fidcredit/avinashy/risk1/FastM2M/logs -n PLXCLNH-request_GR_Response -T csv -R 2017-03-14
+
+sort -t | -k3,3 -k6,6 -k28,28 -k7,7 -k18,18 -k8,8 -k296,296 -k295,295 -k64,64 -k118,118 -k299,299 -k379,379 -k17,17 -k393,393
+
+head /u/cpgcjr/risk1QA/flatfiles/FastM2M/LN/MATURED2/2017-03-21/FastM2M_LN_MATURED2_2017-03-21.PARTIAL_FILE | sort -t '|' -k3,3 -k6,6 -k28,28 -k7,7 -k18,18 -k8,8 -k296,296 -k295,295 -k64,64 -k118,118 -k299,299 -k379,379 -k17,17 -k393,393
