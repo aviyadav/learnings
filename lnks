@@ -9,6 +9,7 @@ s - dzone.com/articles/whats-wrong-java-8-currying-vs
 s - blogs.oracle.com/developers/getting-started-with-microservices-part-one
 
 
+<a href="http://www.javaworld.com/article/2072752/the-java-serialization-algorithm-revealed.html">the-java-serialization-algorithm</a>
 http://www.javaworld.com/article/2072752/the-java-serialization-algorithm-revealed.html
 https://stackoverflow.com/questions/16079931/java-lists-remove-method-works-only-for-second-last-object-inside-for-each-loo
 http://javahungry.blogspot.com/2014/04/fail-fast-iterator-vs-fail-safe-iterator-difference-with-example-in-java.html
@@ -21,3 +22,10 @@ https://stackoverflow.com/questions/16729364/atomic-operations-and-multithreadin
 http://geekswithblogs.net/shahed/archive/2006/06/09/81268.aspx
 https://stackoverflow.com/questions/43974310/why-executorservice-future-submitrunnable-task
 https://stackoverflow.com/questions/369512/how-to-compare-objects-by-multiple-fields
+
+
+
+
+<!--
+<a href="https://www.w3schools.com">Visit W3Schools</a>
+-->
