@@ -41,3 +41,10 @@ dd881c26n1
 sort -t | -k3,3 -k6,6 -k28,28 -k7,7 -k18,18 -k8,8 -k296,296 -k295,295 -k64,64 -k118,118 -k299,299 -k379,379 -k17,17 -k393,393
 
 head /u/cpgcjr/risk1QA/flatfiles/FastM2M/LN/MATURED2/2017-03-21/FastM2M_LN_MATURED2_2017-03-21.PARTIAL_FILE | sort -t '|' -k3,3 -k6,6 -k28,28 -k7,7 -k18,18 -k8,8 -k296,296 -k295,295 -k64,64 -k118,118 -k299,299 -k379,379 -k17,17 -k393,393
+
+
+
+awk '{print $0}' /u/cpgcjr/risk1QA/flatfiles/.avinashy/CLN_RiskOne_REG\@LNCLN/risk1.LNCLN.load.reg.MAIN_FILE | wc -l
+
+awk -F"|" '{print $2, $5}' OFS="," /u/cpgcjr/risk1QA/flatfiles/.avinashy/CLN_RiskOne_REG\@LNCLN/risk1.LNCLN.load.reg.MAIN_FILE
+awk -F"|" '{print $2, $5}' OFS="--" /u/cpgcjr/risk1QA/flatfiles/.avinashy/CLN_RiskOne_REG\@LNCLN/risk1.LNCLN.load.reg.MAIN_FILE
