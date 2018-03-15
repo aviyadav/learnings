@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.iqvia.irp</groupId>
+	<artifactId>editchecks-naaccr</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>IRP ADSE Edit Checks for NAACCR datasets</name>
+	<description>Manage the execution of edit checks for NAACCR datasets coming in to, or already available in, IRP, using GenEDITS native edits library, via its published API.</description>
+	<url>http://wiki.quintiles.net/display/RF</url>
+	<inceptionYear>2017-12-29</inceptionYear>
+	<organization>
+		<name>IQVIA</name>
+		<url>https://www.iqvia.com</url>
+	</organization>
+	<issueManagement>
+		<system>JIRA</system>
+		<url>http://jira.quintiles.net/projects/ADSE</url>
+	</issueManagement>
+	<developers>
+		<developer>
+			<name>Gopinathan Balaji</name>
+			<email>Gopinathan.Balaji@iqvia.com</email>
+			<roles>
+				<role>Architect</role>
+				<role>Programmer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>4.5.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna-platform</artifactId>
+			<version>4.5.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<defaultGoal>install</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<maxmem>256M</maxmem>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+					<debug>true</debug>
+					<debuglevel>lines,vars,source</debuglevel>
+					<optimize>true</optimize>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>usadc-vsnexp02</id>
+			<url>https://usadc-vsnexp02.quintiles.net:8443/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>usadc-vsnexp02</id>
+			<url>https://usadc-vsnexp02.quintiles.net:8443/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+</project>
