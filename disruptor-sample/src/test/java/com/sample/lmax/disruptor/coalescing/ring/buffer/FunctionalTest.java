@@ -189,22 +189,22 @@ public class FunctionalTest {
     @Test
     public void shouldCountRejections() throws Exception {
         CoalescingRingBuffer<Integer, Object> buffer = new CoalescingRingBuffer<Integer, Object>(2);
-        assertEquals(0, buffer.rejectionCount());
+        assertEquals(0, buffer.getRejectionCount());
 
         buffer.offer(new Object());
-        assertEquals(0, buffer.rejectionCount());
+        assertEquals(0, buffer.getRejectionCount());
 
         buffer.offer(1, new Object());
-        assertEquals(0, buffer.rejectionCount());
+        assertEquals(0, buffer.getRejectionCount());
 
         buffer.offer(1, new Object());
-        assertEquals(0, buffer.rejectionCount());
+        assertEquals(0, buffer.getRejectionCount());
 
         buffer.offer(new Object());
-        assertEquals(1, buffer.rejectionCount());
+        assertEquals(1, buffer.getRejectionCount());
 
         buffer.offer(2, new Object());
-        assertEquals(2, buffer.rejectionCount());
+        assertEquals(2, buffer.getRejectionCount());
     }
 
     @SuppressWarnings("RedundantStringConstructorCall")
