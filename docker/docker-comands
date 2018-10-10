@@ -1,0 +1,16 @@
+docker comands - 
+
+
+
+build - {from folder with Dockerfile file}
+docker build -t hello-world .
+
+
+run - simple (forward docker port to host port)
+docker run -p 80:80 hello-world
+
+
+run - map host folder to docker folder
+docker run -p 80:80 -v /Users/avinashyadav/Desktop/docker/src/:/var/www/html/ hello-world
+
+
