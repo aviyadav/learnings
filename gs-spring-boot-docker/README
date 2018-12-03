@@ -1,0 +1,15 @@
+
+mvn install dockerfile:build
+
+docker run -p 8080:8080 -t springio/gs-spring-boot-docker
+
+
+docker ps
+
+----
+CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
+9ac019725649        springio/gs-spring-boot-docker   "java -cp app:/app/l…"   19 seconds ago      Up 18 seconds       0.0.0.0:8080->8080/tcp   ecstatic_archimedes
+
+----
+docker stop 9ac019725649
+docker rm 9ac019725649
